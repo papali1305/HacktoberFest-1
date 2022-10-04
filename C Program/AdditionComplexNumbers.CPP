@@ -27,9 +27,17 @@ int main(void) {
     complexSum = addComplexNumbers(num1, num2);
 
     // Use Ternary Operator to check the sign of the imaginary number
-    signOfImag = (complexSum.imag > 0) ? '+' : '-';
-
-    // Use Ternary Operator to adjust the sign of the imaginary number
+    signOfImag = (complexSum.imag > 0) ? '+' : '-'; 
+ /*   if (complexSum.img> 0)
+{
+    signOfImag='+'
+}  
+else                              //if else statement for ternary operator 
+{
+    signOfImag='-'
+}
+*/
+  // Use Ternary Operator to adjust the sign of the imaginary number
     complexSum.imag = (complexSum.imag > 0) ? complexSum.imag : -complexSum.imag;
 
     cout << "Sum = " << complexSum.real << signOfImag << complexSum.imag << "i";
